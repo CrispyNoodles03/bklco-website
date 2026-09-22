@@ -1,10 +1,10 @@
-# BKLCO Website
+# BKL Website
 
-Website project for BKLCO.
+Website project for BKL.
 
 ## Description
 
-A website developed for BKLCO.
+A website developed for BKL.
 
 ## Features
 
