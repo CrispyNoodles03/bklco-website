@@ -34,8 +34,106 @@ p, span, a, button, .body-text {
 }
 
 /* ==========================================================================
-   CROSSBONES ICON STYLING
+   LANDING PAGE STYLES (index.html)
    ========================================================================== */
+.landing-body {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('assets/images/landing-bg.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.landing-header h1 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.landing-hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.landing-btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2.5rem;
+}
+
+.landing-motto {
+    margin-top: 1.5rem;
+    color: #bbb;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   MAIN GATEWAY STYLES (main.html)
+   ========================================================================== */
+.split-gateway-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 60vh;
+}
+
+.split-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gym-card {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/gym-split.jpg');
+}
+
+.grind-card {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/grind-split.jpg');
+}
+
+.split-overlay {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.split-logo {
+    max-width: 180px;
+}
+
+/* Story Section */
+.origins-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #d1cdb8; /* Warm light accent background from mockup */
+    color: #111;
+}
+
+.origins-section h2 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+
+.origins-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .landing-header {
     display: flex;
     align-items: center;
@@ -76,4 +174,11 @@ p, span, a, button, .body-text {
 .tagline {
     font-family: var(--font-heading);
     letter-spacing: 2px;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+    .split-gateway-section, .origins-section {
+        grid-template-columns: 1fr;
+    }
 }
