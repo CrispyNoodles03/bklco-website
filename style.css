@@ -22,28 +22,38 @@ body {
     padding: 2rem;
 }
 
-h1, h2, h3, .brand-heading, .nav-logo {
+h1, h3, .brand-heading, .nav-logo {
     font-family: var(--font-heading);
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 
 /* Paragraphs, Buttons & Navigation Links (Comfortaa) */
-p, span, a, button, .body-text {
+p, span, a, .body-text {
     font-family: var(--font-body);
+}
+
+h2
+{
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
 }
 
 /* ==========================================================================
    LANDING PAGE STYLES (index.html)
    ========================================================================== */
 .landing-body {
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('assets/images/landing-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('assets/images/MAIN.png') center/cover no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     box-sizing: border-box;
+    padding: 1.5rem;
 }
 
 .landing-header h1 {
@@ -71,40 +81,72 @@ p, span, a, button, .body-text {
 /* ==========================================================================
    MAIN GATEWAY STYLES (main.html)
    ========================================================================== */
-.split-gateway-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 60vh;
-}
-
-.split-card {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Background Images */
 .gym-card {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/gym-split.jpg');
+    background-image: url('assets/images/closer-room.jpg');
+    border-right: 1px solid #282828;
 }
 
 .grind-card {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/grind-split.jpg');
+    background-image: url('assets/images/Coffeeshop, Baku.jpg');
 }
 
+/* --- Dark Overlay & Hover Lighten Effect --- */
 .split-overlay {
-    text-align: center;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75); /* Dark tint by default */
+    transition: background-color 0.4s ease, opacity 0.4s ease;
+    z-index: 1;
+}
+
+/* On hover: lightens overlay to show background image clearly */
+.split-card:hover .split-overlay {
+    background-color: rgba(0, 0, 0, 0.25); /* Lightens tint */
+}
+
+/* Content layer sits above overlay */
+.split-content {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.75rem;
+    width: 100%;
 }
+
+/* --- Fixed Logo Sizing & Alignment --- */
+.logo-box {
+    width: 100%;
+    max-width: 340px;   /* Shared max width container for both logos */
+    height: 110px;      /* Fixed exact height frame */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Pure white vector */
+    transition: transform 0.3s ease;
+}
+
+/* Subtle zoom effect on logo when section is hovered */
+.split-card:hover .brand-logo-img {
+    transform: scale(1.05);
+}
+
 
 .split-logo {
     max-width: 180px;
 }
+
 
 /* Story Section */
 .origins-section {
@@ -161,14 +203,30 @@ p, span, a, button, .body-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 1rem;
+    justify-content: center;
+    width: 220px;            /* Fixed width for uniform layout */
+    height: 180px;           /* Fixed height to keep both logos equal */
+    text-align: center;
 }
 
+
+.brand-badge h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    line-height: 1.05;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Crossbones icon inside the badge */
 .badge-bone {
-    width: 50px;
-    height: auto;
-    filter: brightness(0) invert(1);
+    width: 55px;             /* Exact size for the top crossbones */
+    height: 55px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Keeps PNG vector sharp and white */
+    margin-bottom: 0.5rem;
 }
 
 .tagline {
@@ -176,9 +234,137 @@ p, span, a, button, .body-text {
     letter-spacing: 2px;
 }
 
-/* Mobile responsive layout */
+.brand-logo-img {
+    height: 120px;          /* Sets exact height for both logos */
+    width: auto;            /* Keeps original aspect ratio intact */
+    max-width: 80%;         /* Prevents overflow on narrow screens */
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Ensures pure white vectors on dark bg */
+    transition: transform 0.2s ease;
+}
+
+.split-gateway-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 75vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.split-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+/* ==========================================================================
+   BUTTON STYLES (MATCHING FIGMA MOCKUP)
+   ========================================================================== */
+
+/* Base Button Reset & Common Styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2.25rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Primary Button (Landing Page "Explore Us" & Dark Call-to-Actions) */
+.landing-btn, 
+.btn-primary {
+    background-color: #ffffff;
+    color: #0d0d0d;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.landing-btn:hover, 
+.btn-primary:hover {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Split-Gateway Hero Buttons ("THE GYM" / "THE GRIND CO.") */
+.split-btn {
+    background-color: rgba(13, 13, 13, 0.75); /* Dark translucent background */
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0);
+    backdrop-filter: blur(4px); /* Subtle blur behind the button */
+    padding: 0.65rem 2rem;
+    min-width: 140px;
+}
+
+.split-btn:hover {
+    background-color: #ffffff;
+    color: #0d0d0d;
+    border-color: #ffffff;
+    transform: scale(1.03);
+}
+
+/* Secondary / Outline Button (For forms & secondary section links) */
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+/* Active / Pressed State */
+.btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Responsive adjustment for smaller mobile displays */
+@media (max-width: 480px) {
+    .brand-badge {
+        width: 180px;
+        height: 150px;
+    }
+    
+    .badge-bone {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand-badge h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .split-gateway-section, .origins-section {
+    .split-gateway-section {
         grid-template-columns: 1fr;
+    }
+
+    .gym-card {
+        border-right: none;
+        border-bottom: 1px solid #282828;
+    }
+
+    .logo-box {
+        height: 80px;
+        max-width: 260px;
     }
 }
