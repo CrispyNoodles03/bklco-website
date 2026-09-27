@@ -22,7 +22,7 @@ body {
     padding: 2rem;
 }
 
-h1, h3, .brand-heading, .nav-logo {
+h1, .brand-heading {
     font-family: var(--font-heading);
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -41,6 +41,23 @@ h2
     font-size: 1.8rem;
 }
 
+h3
+{
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    text-align: left;
+}
+h4
+{
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 /* ==========================================================================
    LANDING PAGE STYLES (index.html)
    ========================================================================== */
@@ -56,13 +73,8 @@ h2
     padding: 1.5rem;
 }
 
-.landing-header h1 {
-    font-size: 2rem;
-    margin-top: 1.5rem;
-}
-
 .landing-hero h1 {
-    font-size: 3.5rem;
+    font-size: 5rem;
     line-height: 1.1;
     letter-spacing: 2px;
 }
@@ -78,10 +90,104 @@ h2
     letter-spacing: 1px;
 }
 
+.landing-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: calc(100vh - 70px); /* Subtracts header bar height */
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+/* Staggered Heavy Title */
+.landing-title {
+    font-family: 'Evogria', sans-serif; /* Your local Evogria font */
+    color: #ffffff;
+    font-size: 5rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+/* Explore Us Button */
+.landing-btn {
+    display: inline-block;
+    padding: 0.75rem 2.5rem;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 3rem;
+}
+
+.landing-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Permanently Fixed Side Lines around Motto */
+.landing-motto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 650px;
+}
+
+.motto-line {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5); /* Solid, permanent white line */
+}
+
+.motto-text {
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0 1.25rem;
+    white-space: nowrap;
+}
 /* ==========================================================================
    MAIN GATEWAY STYLES (main.html)
    ========================================================================== */
 /* Background Images */
+
+.bkl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #181818; /* Dark charcoal bar */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+}
+
+/* Central BKL Image Logo Sizing */
+.header-logo-img {
+    height: 32px;                   /* Adjust height to fit header bar proportion */
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Keeps logo pure white */
+}
+
+/* Crossbones End Icons */
+.header-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Ensures pure white crossbone vectors */
+}
+
 .gym-card {
     background-image: url('assets/images/closer-room.jpg');
     border-right: 1px solid #282828;
@@ -154,7 +260,7 @@ h2
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 4rem 2rem;
-    background-color: #d1cdb8; /* Warm light accent background from mockup */
+    background-color: #ddd9d0; /* Warm light accent background from mockup */
     color: #111;
 }
 
@@ -284,8 +390,7 @@ h2
     transition: all 0.25s ease-in-out;
 }
 
-/* Primary Button (Landing Page "Explore Us" & Dark Call-to-Actions) */
-.landing-btn, 
+/* Primary Button (Landing Page "Explore Us" & Dark Call-to-Actions) */ 
 .btn-primary {
     background-color: #ffffff;
     color: #0d0d0d;
@@ -293,7 +398,6 @@ h2
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.landing-btn:hover, 
 .btn-primary:hover {
     background-color: #e6e6e6;
     border-color: #e6e6e6;
@@ -333,6 +437,197 @@ h2
 /* Active / Pressed State */
 .btn:active {
     transform: translateY(0) scale(0.98);
+}
+
+/* ==========================================================================
+   VERTICAL SOCIALS SECTION
+   ========================================================================== */
+
+.socials-section {
+    padding: 2rem 2rem;
+    color: #111; /* Matching the light background section from mockup */
+    background-color: #EBE7DF;
+}
+
+.socials-section h2 {
+    font-family: var(--font-body);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Two-column layout: Logos on left, Links on right */
+.socials-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+/* Left Column: Brand Names & Logos */
+.socials-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Matches vertical spacing of link groups */
+    padding-left: 2rem;
+    filter: brightness(0);/* Ensures logos are white on light background */
+}
+
+.social-brand {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    filter: grayscale(100%) brightness(0) !important;/* Ensures logos are white on light background */
+}
+
+.brand-icon {
+    width: 280px;
+    height: 120px;
+    object-fit: contain;
+    filter: brightness(0);/* Ensures logos are white on light background */
+}
+
+.social-brand h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Right Column: Link Groups */
+.socials-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 3rem;
+}
+
+.social-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.social-group, .grind-socials{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-top: 1.5rem;
+}
+
+/* Individual Vertical Social Row */
+.social-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+    filter: grayscale(100%) brightness(0) !important; /* Ensures icons are white on light background */
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.social-row span {
+    position: relative;
+    display: inline-block;
+}
+
+/* Line animation starts at 0% width under the text */
+.social-row span::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px; /* Locked to exact 1px height */
+    background-color: #111111;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-row:hover span::after {
+    transform: scaleX(1);
+}
+
+
+/* Mobile Responsive adjustment */
+@media (max-width: 650px) {
+    .socials-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .socials-logos {
+        gap: 1.5rem;
+    }
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-bottom: 1rem;
+    margin-left: 1.2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    width: 120px;
+    height: 80px;
+}
+
+.footer-logo-text {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-top: 0.5rem;
+    margin-left: 1.2rem;
+    letter-spacing: 1.3px;
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+
+.footer-text {
+    text-align: left;
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 1rem;
+    margin-left: 1.2rem;
+    padding-top: 0.5rem;
+}
+
+.footer-text-2 {
+    text-align: left;
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-left: 1.2rem;
+    margin-bottom: -0.5rem;
+}
+
+.footer-text-2-1 {
+    text-align: left;
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+hr
+{
+    border: 0;
+    height: 1px;
+    background-color: #bbb;
+    margin: 0 1.2rem 1rem 1.2rem;
+    padding-bottom: 0rem;
 }
 
 /* Responsive adjustment for smaller mobile displays */
