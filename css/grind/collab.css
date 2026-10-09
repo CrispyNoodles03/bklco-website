@@ -1,0 +1,120 @@
+.collab-cta-section {
+    max-width: 1200px;
+    margin: 4rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.collab-cta-card {
+    background-color: #121212;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.collab-cta-card h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.collab-cta-card p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #cccccc;
+    max-width: 580px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.collab-cta-card .cta-btn {
+    display: inline-block;
+    background-color: #7F804B;
+    color: #ffffff;
+    padding: 0.85rem 2.2rem;
+    border-radius: 30px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.collab-cta-card .cta-btn:hover {
+    background-color: #696a3e;
+    transform: translateY(-2px);
+}
+
+.collab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.collab-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-img-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    background-color: #eee;
+}
+
+.collab-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.collab-content h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 0.5rem;
+}
+
+.collab-content p {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.collab-content .learn-more {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #121212;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.collab-content .learn-more:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+    .collab-grid {
+        grid-template-columns: 1fr;
+    }
+}

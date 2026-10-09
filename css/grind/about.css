@@ -1,0 +1,177 @@
+.story {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.story h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.story p {
+    color: #bbb;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.mission {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 1.5rem;
+}
+
+.mission h2 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.mission h3 {
+    text-align: center;
+    color: #bbb;
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.value {
+    background-color: #181818;
+    border: 1px solid #282828;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.value h4 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.value p {
+    color: #bbb;
+    font-size: 0.88rem;
+}
+
+.about-story-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem 4rem;
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.story-text h2 {
+    font-family: var(--font-body);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-text p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.story-text .story-highlight {
+    font-weight: 600;
+    color: #121212;
+}
+
+.story-image {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.about-mission-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 5rem;
+    text-align: center;
+}
+
+.about-mission-section .sub-motto {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: #888888;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.about-mission-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #121212;
+    letter-spacing: 1.5px;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.value-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.value-icon {
+    width: 44px;
+    height: 44px;
+    background-color: #2b5435;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.value-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.value-card p {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.6;
+}

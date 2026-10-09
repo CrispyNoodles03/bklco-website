@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Evogria';
+    src: url('../../assets/fonts/Evogria.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-heading: 'Evogria', sans-serif;
+    --font-body: 'Comfortaa', cursive, sans-serif;
+    --bg-dark: #0a0a0a;
+    --bg-cream: #dcd7cc;
+    --text-olive: #7F804B;
+    --text-dark: #121212;
+    --text-light: #f5f5f5;
+    --text-muted: #888888;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+h1, h2, .brand-heading {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+p, span, a, .body-text {
+    font-family: var(--font-body);
+}
+
+.cream-section {
+    background-color: var(--bg-cream, #DCD7CC);
+    padding: 3rem 5% 5rem;
+    color: #121212;
+}
+
+.landing-motto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+}
+
+.motto-line {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.motto-text {
+    color: #666666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0 1.25rem;
+    white-space: nowrap;
+}
+
+.section-title-dark {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: #121212;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Order | BKL Grind Co.</title>
+    <link rel="stylesheet" href="css/grind/base.css" />
+    <link rel="stylesheet" href="css/grind/header.css" />
+    <link rel="stylesheet" href="css/grind/advance-order.css" />
+    <link rel="stylesheet" href="css/grind/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ADVANCE ORDER HERO HEADER -->
+    <header class="header-nav advance-hero">
+      <nav>
+        <a href="home.html" class="nav-logo-link">
+          <img
+            src="assets/images/grind-logo-hori-white.png"
+            alt="BKL Grind Co."
+            class="nav-brand-logo"
+          />
+        </a>
+
+        <div class="nav-links-wrapper">
+          <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="menu.html" class="active">THE FUELS</a></li>
+            <li><a href="collab.html">COLLABS</a></li>
+            <li><a href="offers-membership.html">OFFERS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+          <div class="hamburger-menu">&#9776;</div>
+        </div>
+      </nav>
+
+      <!-- HERO CONTENT GRID -->
+      <div class="advance-hero-container">
+        <div class="advance-hero-text">
+          <span class="hero-badge">MINUTES SAVED MATTER</span>
+          <h1>SKIP THE LINE.<br />FUEL THE GRIND.</h1>
+          <p>
+            Order up to 30 minutes in advance. Your coffee will be brewed hot
+            and fresh, waiting for you at the 3F BKL Gym Counter right as you
+            finish your workout.
+          </p>
+        </div>
+
+        <div class="advance-hero-image">
+          <img
+            src="assets/images/Cafe Shop Design Ideas.jpg"
+            alt="Steaming Coffee at Counter"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- CREAM MAIN CONTENT SECTION -->
+    <main class="cream-section">
+      <!-- SECTION 1: HOW IT WORKS -->
+      <section class="how-it-works-section">
+        <span class="sub-motto">HOW ADVANCE ORDERING WORKS</span>
+        <h2 class="section-title-dark">
+          3 Simple Steps to Fuel Up Without the Wait
+        </h2>
+
+        <div class="steps-grid">
+          <!-- STEP 1 -->
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Browse the Menu</h3>
+            <p>
+              Pick your cold brews, protein bars, or clean macro bowls from our
+              fresh catalog.
+            </p>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Place Your Order</h3>
+            <p>
+              Specify your prep requirements and set your target pickup window
+              (at least 30 mins out).
+            </p>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Pick Up & Go</h3>
+            <p>
+              Swing by the BKL Grind bar at BKL Gym 3F. Grab your order and
+              power through.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: FUNCTIONAL ADVANCE ORDER BUILDER -->
+      <section class="advance-form-section" id="order-builder">
+        <div class="advance-form-container">
+          <!-- LEFT: ORDERING INFORMATION -->
+          <aside class="form-instructions">
+            <span class="sub-motto">START AN ADVANCE ORDER</span>
+            <h2 class="instructions-title">
+              Your next fuel-up, on your schedule.
+            </h2>
+            <p class="instructions-p">
+              Build your order, customize your items, and choose a pickup
+              window. Have your confirmation ready for the BKL Grind baristas
+              when you arrive.
+            </p>
+
+            <div class="note-box">
+              <span class="green-bar" aria-hidden="true"></span>
+              <div>
+                <strong>Give us at least 30 minutes.</strong>
+                <p>
+                  Choose a pickup window at least 30 minutes from now so the
+                  team has time to prepare your order fresh.
+                </p>
+              </div>
+            </div>
+
+            <div class="order-side-note">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div>
+                <strong>Pickup location</strong>
+                <p>
+                  3F BKL Gym Counter<br />Apo Center, Sto. Domingo, Angeles City
+                </p>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RIGHT: MENU, CART, AND CHECKOUT -->
+          <div class="advance-form-card">
+            <div class="order-card-heading">
+              <span class="sub-motto">BUILD YOUR ORDER</span>
+              <h2>Make It Yours</h2>
+              <p>
+                Choose your fuel, make it your own, and add it to your
+                pre-order.
+              </p>
+            </div>
+
+            <div class="form-group full-width customer-name-group">
+              <label for="customerName">Full Name</label>
+              <input
+                type="text"
+                id="customerName"
+                name="customerName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                minlength="2"
+                required
+              />
+            </div>
+
+            <div class="category-filter-wrap">
+              <label class="field-eyebrow" id="categoryLabel"
+                >BROWSE CATEGORIES</label
+              >
+              <div
+                class="category-pills"
+                id="categoryPills"
+                role="group"
+                aria-labelledby="categoryLabel"
+              >
+                <button
+                  type="button"
+                  class="category-pill active"
+                  data-category="all"
+                  aria-pressed="true"
+                >
+                  All Items
+                </button>
+                <button
+                  type="button"
+                  class="category-pill"
+                  data-category="drinks"
+                  aria-pressed="false"
+                >
+                  Signature Drinks
+                </button>
+                <button
+                  type="button"
+                  class="category-pill"
+                  data-category="foods"
+                  aria-pressed="false"
+                >
+                  Macro Foods
+                </button>
+                <button
+                  type="button"
+                  class="category-pill"
+                  data-category="snacks"
+                  aria-pressed="false"
+                >
+                  Quick Bites
+                </button>
+              </div>
+            </div>
+
+            <form id="add-item-form" class="add-item-form">
+              <div class="form-group">
+                <label for="itemSelect">Select Menu Item</label>
+                <select id="itemSelect" name="item" required>
+                  <!-- Menu options are populated by advance-order.js -->
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="itemTemp">Preparation</label>
+                  <select id="itemTemp" name="preparation"></select>
+                </div>
+                <div class="form-group">
+                  <label for="itemQty">Quantity</label>
+                  <input
+                    type="number"
+                    id="itemQty"
+                    name="quantity"
+                    value="1"
+                    min="1"
+                    max="10"
+                    step="1"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="itemNotes"
+                  >Customization / Add-ons
+                  <span class="optional-label">OPTIONAL</span></label
+                >
+                <input
+                  type="text"
+                  id="itemNotes"
+                  name="notes"
+                  maxlength="120"
+                  placeholder="e.g., oat milk, less sweet, no ice"
+                />
+              </div>
+
+              <button
+                type="button"
+                class="submit-btn add-to-order-btn"
+                id="btnAddItem"
+              >
+                <i class="fa-solid fa-plus" aria-hidden="true"></i> Add to
+                Pre-Order
+              </button>
+              <p
+                class="form-message"
+                id="orderMessage"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+
+            <div class="order-divider" aria-hidden="true"></div>
+
+            <div class="order-summary-heading">
+              <div>
+                <span class="sub-motto">YOUR SELECTION</span>
+                <h3>Order Summary</h3>
+              </div>
+              <span class="cart-count" id="cartCount">0 items</span>
+            </div>
+
+            <ul class="order-list" id="orderList" aria-live="polite">
+              <li class="empty-state" id="emptyState">
+                <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+                <span>Your order is empty.</span>
+                <small>Add something from the menu to get started.</small>
+              </li>
+            </ul>
+
+            <div class="form-group pickup-group">
+              <label for="pickupTime">Expected Pickup Window</label>
+              <div class="pickup-select-wrap">
+                <select id="pickupTime" name="pickupTime" required>
+                  <option value="In 30 Minutes">In 30 Minutes</option>
+                  <option value="In 45 Minutes">In 45 Minutes</option>
+                  <option value="In 1 Hour">In 1 Hour</option>
+                </select>
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="summary-box">
+              <div class="summary-row">
+                <span>Estimated macros</span>
+                <span id="macroSummary">0 kcal · 0g protein</span>
+              </div>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotalPrice">₱0.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total amount</span>
+                <span id="totalPrice">₱0.00</span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="submit-btn confirm-order-btn"
+              id="btnConfirmOrder"
+              disabled
+            >
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i> Confirm
+              Pre-Order
+            </button>
+            <p class="checkout-footnote">
+              Prices and nutrition values are estimates for this website demo.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ORDER CONFIRMATION MODAL -->
+    <div
+      class="modal-backdrop"
+      id="orderModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="orderModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="modal-icon">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+        </div>
+        <span class="sub-motto">YOU'RE ALL SET</span>
+        <h2 id="orderModalTitle">Pre-Order Summary</h2>
+        <p class="modal-intro">
+          Your order details are ready to show the BKL Grind barista at pickup.
+        </p>
+        <div class="modal-details">
+          <div>
+            <strong>Order ID</strong><span id="modalOrderId">#BKL-0000</span>
+          </div>
+          <div><strong>Name</strong><span id="modalCustomerName">-</span></div>
+          <div>
+            <strong>Pickup window</strong><span id="modalPickupTime">-</span>
+          </div>
+          <div>
+            <strong>Estimated total</strong><span id="modalTotal">₱0.00</span>
+          </div>
+        </div>
+        <p class="modal-demo-note">
+          Demo only: this page does not send orders to the café or process
+          payment.
+        </p>
+        <button class="modal-btn" type="button" id="closeOrderModal">
+          Done
+        </button>
+      </div>
+    </div>
+
+    <!-- DARK FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img
+            src="assets/images/Grind-logo-white-n3.png"
+            alt="BKL Grind Co."
+            class="footer-logo-img"
+          />
+          <p class="footer-tagline">
+            BUILT BY THE TRIBE, CRAFTED FOR THE GRIND
+          </p>
+          <p class="footer-subtext">
+            Specialty coffee crafted to keep you fueled.<br />Located right
+            above BKL Gym.
+          </p>
+        </div>
+
+        <div class="footer-info">
+          <div class="info-block">
+            <h4>HOURS</h4>
+            <p>Mon–Sat: 7:00am–10:00pm</p>
+            <p>Sunday: 9:00am–5:00pm</p>
+          </div>
+          <div class="info-block">
+            <h4>LOCATION</h4>
+            <p>3F Apo Center, Sto. Domingo<br />Angeles City, Pampanga</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 BKL Grind Co. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/nav-scroll.js"></script>
+    <script src="js/advance-order.js" defer></script>
+  </body>
+</html>
