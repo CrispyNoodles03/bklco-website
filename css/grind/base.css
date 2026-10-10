@@ -88,3 +88,64 @@ p, span, a, .body-text {
     margin-bottom: 3rem;
     letter-spacing: 1px;
 }
+
+@media (max-width: 1024px) {
+    .section-title-dark {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .landing-motto {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .motto-text {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+    }
+
+    .cream-section {
+        padding: 2.5rem 5% 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title-dark {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .landing-motto {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .motto-line {
+        display: none;
+
+    .motto-text {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .cream-section {
+        padding: 2rem 1.5rem 3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-title-dark {
+        font-size: 1.3rem;
+    }
+
+    .motto-text {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .cream-section {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+}
