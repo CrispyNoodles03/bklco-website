@@ -175,3 +175,66 @@
     color: #666666;
     line-height: 1.6;
 }
+
+
+.story-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.values-grid {
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 768px) {
+    .story h2,
+    .mission h2,
+    .story-text h2,
+    .about-mission-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .story p,
+    .mission h3,
+    .story-text p,
+    .value-card p {
+        font-size: 0.85rem;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-container {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .story h2,
+    .mission h2,
+    .story-text h2,
+    .about-mission-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .story p,
+    .mission h3,
+    .story-text p,
+    .value-card p {
+        font-size: 0.8rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-container {
+        gap: 1.5rem;
+    }
+
+    .value {
+        padding: 1.5rem;
+    }
+}
+
